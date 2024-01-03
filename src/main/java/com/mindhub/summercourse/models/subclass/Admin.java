@@ -1,5 +1,6 @@
 package com.mindhub.summercourse.models.subclass;
 
+import com.mindhub.summercourse.models.Person;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,8 +13,10 @@ import lombok.Setter;
 @Entity
 @Getter @Setter
 @NoArgsConstructor
-@AllArgsConstructor
-public class Admin {
+public class Admin extends Person {
 
 
+  public Admin(String name, String lastName, String email, String password) {
+    super(name, lastName, email, password);
+  }
 }

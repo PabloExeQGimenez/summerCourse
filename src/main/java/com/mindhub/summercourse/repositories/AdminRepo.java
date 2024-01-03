@@ -1,4 +1,9 @@
 package com.mindhub.summercourse.repositories;
 
-public interface AdminRepo {
+import com.mindhub.summercourse.models.subclass.Admin;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface AdminRepo extends JpaRepository<Admin, Long> {
 }
