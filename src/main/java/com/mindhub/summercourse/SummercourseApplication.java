@@ -1,9 +1,11 @@
 package com.mindhub.summercourse;
 
+import com.mindhub.summercourse.models.Course;
 import com.mindhub.summercourse.models.subclass.Admin;
 import com.mindhub.summercourse.models.subclass.Student;
 import com.mindhub.summercourse.models.subclass.Teacher;
 import com.mindhub.summercourse.repositories.AdminRepo;
+import com.mindhub.summercourse.repositories.CourseRepo;
 import com.mindhub.summercourse.repositories.StudentRepo;
 import com.mindhub.summercourse.repositories.TeacherRepo;
 import org.springframework.boot.CommandLineRunner;
@@ -22,7 +24,7 @@ public class SummercourseApplication {
 	}
 
 	@Bean
-	public CommandLineRunner initData(AdminRepo adminRepo, TeacherRepo teacherRepo, StudentRepo studentRepo) {
+	public CommandLineRunner initData(CourseRepo courseRepo, AdminRepo adminRepo, TeacherRepo teacherRepo, StudentRepo studentRepo) {
 		return args -> {
 			Admin admin = new Admin("Mirta", "Lozano", "mirta@admin.com", "mirta");
 			adminRepo.save(admin);
@@ -30,6 +32,10 @@ public class SummercourseApplication {
 			teacherRepo.save(teacher);
 			Student student = new Student("Ludmila", "Ibarra", "Ludmila@student.com","ludmi");
 			studentRepo.save(student);
+
+			Course courseJava = new Course("Java");
+			courseRepo.save(courseJava);
+
 		};
 	}
 }

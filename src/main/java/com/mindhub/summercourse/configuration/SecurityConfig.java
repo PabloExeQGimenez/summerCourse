@@ -1,3 +1,4 @@
+/*
 package com.mindhub.summercourse.configuration;
 
 import org.springframework.context.annotation.Bean;
@@ -61,4 +62,4 @@ public class SecurityConfig {
 
     }
   }
-}
+}*/

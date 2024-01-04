@@ -1,3 +1,4 @@
+/*
 package com.mindhub.summercourse.configuration;
 
 import com.mindhub.summercourse.models.Person;
@@ -22,11 +23,13 @@ public class WebAuthentication extends GlobalAuthenticationConfigurerAdapter {
 
   @Override
   public void init(AuthenticationManagerBuilder auth) throws Exception {
-   /* auth.userDetailsService(inputName -> {
+   */
+/* auth.userDetailsService(inputName -> {
       Person person = personRepo.findByEmail(inputName);
 
 
 
-    });*/
+    });*//*
+
   }
-}
+}*/
