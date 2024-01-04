@@ -21,12 +21,10 @@ public class SecurityConfig {
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
     http.authorizeHttpRequests(authorize -> authorize
-        .requestMatchers("/api/login", "/web/index.html", "/web/assets/style/**", "/web/assets/scripts/index.js").permitAll()
-        .requestMatchers(HttpMethod.POST, "/api/login", "/api/clientes/**").permitAll()
+        .requestMatchers("/api/login").permitAll()
+        .requestMatchers(HttpMethod.POST, "/api/login").permitAll()
         .requestMatchers(
-            "/web/assets/pages/cuentas.html",
-            "/api/clientes/current/accounts",
-            "/api/cards").hasAuthority("CLIENT")
+            ).hasAuthority("ADMIN")
 
         .anyRequest().authenticated());
 

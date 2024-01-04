@@ -35,6 +35,8 @@ public class SummercourseApplication {
 
 			Course courseJava = new Course("Java");
 			courseRepo.save(courseJava);
+			Course courseCSS = new Course("CSS");
+			courseRepo.save(courseCSS);
 
 		};
 	}
